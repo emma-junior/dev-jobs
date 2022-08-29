@@ -1,6 +1,5 @@
 import { useGlobalContext } from "../hooks/DevjobContext"
 import { motion } from "framer-motion";
-import Image from "next/image"
 
 const Card = ({job}) => {
   const { switchChecked } = useGlobalContext();
@@ -12,7 +11,7 @@ const Card = ({job}) => {
 
   return (
     <motion.section whileHover={{ scale: 1.1 }} className={`${switchChecked ? "bg-[#19202d]" : "bg-white"} p-4 w-72 rounded-lg mx-auto cursor-pointer ${style.colorTrans}`}>
-      <motion.div animate={{rotate: 360, transition: { duration: 1 }}} className={`${style.iconBg} w-12 h-10 rounded-lg -mt-8 flex justify-center items-center`}><Image className="" src={job.jobIcon} alt="" /></motion.div>  
+      <motion.div animate={{rotate: 360, transition: { duration: 1 }}} className={`${style.iconBg} w-12 h-10 rounded-lg -mt-8 flex justify-center items-center`}><img className="" src={job.jobIcon} alt="" /></motion.div>  
         <div className="space-x-2 text-[#667891]">
         <span >{job.timePosted}</span>
         <span className="text-[40px]">.</span>
