@@ -1,4 +1,5 @@
 import Link from "next/link";
+import Image from "next/image"
 import { devCase } from "../helper/helper";
 import { useGlobalContext } from "../hooks/DevjobContext";
 const Companysite = ({ singlejob }) => {
@@ -31,13 +32,13 @@ const Companysite = ({ singlejob }) => {
       <span
         className={`${style.iconBg} w-36 h-36 md:flex justify-center hidden items-center mr-12`}
       >
-        <img className="w-16" src={singlejob?.jobIcon} alt="" />
+        <Image className="w-16" src={singlejob?.jobIcon} alt="" />
       </span>
       <div className="absolute -top-5 left-0 right-0 ml-auto mr-auto w-[40px]">
         <span
           className={`${style.iconBg} w-12 h-10 rounded-lg  flex md:hidden justify-center items-center`}
         >
-          <img className="" src={singlejob?.jobIcon} alt="" />
+          <Image className="" src={singlejob?.jobIcon} alt="" />
         </span>
       </div>
       <div className="block md:flex w-[70%] md:justify-between mt-7 md:mt-0 mx-auto ">

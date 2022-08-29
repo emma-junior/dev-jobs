@@ -39,7 +39,7 @@ export default function Home() {
       }
       {modal && <div className="bg-[#000] bg-opacity-50 h-full w-full top-0 absolute z-30"><Modal input={input} setInput={setInput} setData={setData} search={search} setToggle={setToggle} toggle={toggle} setModal={setModal} /></div>}
       <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 w-[80%] lg:w-[75%] justify-center mx-auto">
-        {data.map((job) => <Link href='/details/[id]' as={`/details/${job.companyName}`}><a><Card key={job.id} job={job} /></a></Link>)}
+        {data.map((job) => <Link key={job.id} href='/details/[id]' as={`/details/${job.companyName}`}><a><Card  job={job} /></a></Link>)}
       </div>
     </section>
   )
