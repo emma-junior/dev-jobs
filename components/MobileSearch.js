@@ -9,7 +9,7 @@ const MobileSearch = ({input, setInput, setData, search, setModal}) => {
   return (
     <section className={`${switchChecked ? "bg-[#19202d]" : "bg-white"} -mt-20 mb-12 h-20 w-[80%] mx-auto rounded-md ${style.colorTrans}`}>
         <div className='flex w-[100%] h-[100%] justify-center items-center'>
-            <input value={input.title}  onChange={(e) =>
+            <input value={input.title.toLowerCase()}  onChange={(e) =>
               setInput({ ...input, title: e.target.value })
             } placeholder="Filter by title" className={`${switchChecked ? "bg-[#19202d] text-white" : "bg-white"} w-[60%] p-1 outline-none ${style.colorTrans}`}   />
             <img onClick={() => setModal(true)} className='mx-2 h-6' src='/assets/designs/icon-filter.svg' alt='filter icon' />

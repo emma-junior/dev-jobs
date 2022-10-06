@@ -13,7 +13,7 @@ const Searchbar = ({input, setInput, setData, search, toggle, setToggle }) => {
     <main className={`${switchChecked ? "bg-[#19202d]" : "bg-white"} flex w-[78%]   lg:w-[72%] mx-auto px-4 -mt-20 rounded-lg mb-16 ${style.colorTrans}`}>
         <div className="flex  items-center">
             <img className="mx-3 w-6 h-6" src="/assets/designs/icon-search.svg" alt="" />
-            <input value={input.title}
+            <input value={input.title.toLowerCase()}
             onChange={(e) =>
               setInput({ ...input, title: e.target.value })
             } placeholder="Filter by title.." className={`${switchChecked ? "bg-[#19202d] text-white" : "bg-white"} w-[150px] lg:w-[240px] h-6 outline-none ${style.colorTrans}`} />
@@ -21,7 +21,7 @@ const Searchbar = ({input, setInput, setData, search, toggle, setToggle }) => {
         <div className="w-[1px] h-20 bg-[#D5D8F7]"></div>
         <div className="flex items-center">
             <img className="mx-3 w-5 h-6" src="/assets/designs/icon-location.svg" />
-            <input value={input.location} onChange={(e) => setInput({...input, location: e.target.value})} placeholder="Filter by location" className={`${switchChecked ? "bg-[#19202d] text-white" : "bg-white"}  w-[140px] lg:w-[240px] h-6 outline-none ${style.colorTrans}`}  />
+            <input value={input.location.toLowerCase()} onChange={(e) => setInput({...input, location: e.target.value})} placeholder="Filter by location" className={`${switchChecked ? "bg-[#19202d] text-white" : "bg-white"}  w-[140px] lg:w-[240px] h-6 outline-none ${style.colorTrans}`}  />
         </div>
         <div className="w-[1px] h-20 bg-[#D5D8F7]"></div>
         <div className="flex items-center">
