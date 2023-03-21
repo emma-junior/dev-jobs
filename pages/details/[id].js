@@ -1,3 +1,4 @@
+import Head from "next/head";
 import { useRouter } from "next/router";
 import { useGlobalContext } from "../../hooks/DevjobContext";
 import Companysite from "../../components/Companysite";
